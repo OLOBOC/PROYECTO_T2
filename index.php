@@ -16,14 +16,15 @@ $profesores = Profesor::crearProfesoresDeMuestra($asignaturas);
 $asignaturas = Asignatura::crearAsignaturasDeMuestra();
 
 // lista alumn 
+echo "<h2>Alumnos</h2>";
 foreach ($alumnos as $alumno) {
-    echo "Nombre: " . $alumno->getNombre() . ", Email: " . $alumno->getEmail();
+    echo "<li>"."Nombre: " . $alumno->getNombre() . ", Email: " . $alumno->getEmail()."</li>" ;
 }
 
 // lista prof
 echo "<h2>Profesores</h2>";
 foreach ($profesores as $profesor) {
-    echo  "Nombre: " . $profesor->getNombre() . ", Email: " . $profesor->getEmail();
+   echo "<li>" . "Nombre: " . $profesor->getNombre() . ", Email: " . $profesor->getEmail() . "</li>";
 }
 
 // lista asig
@@ -37,4 +38,7 @@ foreach ($asignaturas as $asignatura) {
 $filtradoalumn = array_filter($alumnos, function($alumn) {
     return $alumn->getEdad() <= 23;
 });
-
+echo "<h2>Alumnos <= 23</h2>";
+foreach ($filtradoalumn as $alumn) {
+    echo "<li>" . "Nombre: " . $alumn->getNombre() . ", Email: " . $alumn->getEmail() . "</li>";
+}
