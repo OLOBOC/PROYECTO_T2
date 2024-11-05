@@ -60,4 +60,13 @@ $alumnos[7]->matricularEnAsignatura($asignaturas[2]);
 $alumnos[8]->matricularEnAsignatura($asignaturas[1]);
 $alumnos[9]->matricularEnAsignatura($asignaturas[0]);
 
+// alumnos con almenos dos asignaturas 
+$filtroalumn2 = array_filter($alumnos, function($alumno) {
+    return count($alumno->getAsignaturas()) >= 2;
+});
+//listado de el array filter de fitroalumn2
+echo "<h2>Alumnos con al menos dos asignaturas</h2>";
+foreach ($filtroalumn2 as $alumno) {
+    echo "<li>" . "Nombre: " . $alumno->getNombre() . ", Email: " . $alumno->getEmail() . "</li>";
+}
 ?>
