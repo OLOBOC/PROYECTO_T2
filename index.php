@@ -12,6 +12,9 @@ $alumnos = Alumno::crearAlumnosDeMuestra($asignaturas);
 //llamada profesoresmuestra
 $profesores = Profesor::crearProfesoresDeMuestra($asignaturas);
 
+//llamada asigmuestra
+$asignaturas = Asignatura::crearAsignaturasDeMuestra();
+
 // lista alumn 
 
 foreach ($alumnos as $alumno) {
@@ -22,5 +25,11 @@ foreach ($alumnos as $alumno) {
 echo "<h2>Profesores</h2>";
 foreach ($profesores as $profesor) {
     echo  "Nombre: " . $profesor->getNombre() . ", Email: " . $profesor->getEmail();
+}
+
+// lista asig
+echo "<h2>Asignaturas</h2>";
+foreach ($asignaturas as $asignatura) {
+    echo "<li>" . "Nombre: " . $asignatura->getNombre() . ", Créditos: " . $asignatura->getCreditos() . "</li>";
 }
 ?>
