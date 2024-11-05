@@ -1,5 +1,5 @@
 <?php
-
+include_once('clases/Miembro.php');
 class Asignatura extends Miembro
 {
     private $id;

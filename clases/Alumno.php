@@ -1,5 +1,5 @@
 <?php
-
+include_once 'clases/Miembro.php';
 class Alumno extends Miembro
 {
     private $asignaturas = [];
@@ -17,7 +17,7 @@ class Alumno extends Miembro
 
 
 
-    //metodos
+    //Metodos
     public function abonarCurso()
     {
         $cursoAbonado = true;
