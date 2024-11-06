@@ -11,7 +11,7 @@ class Profesor extends Miembro {
         $this->asignatura = $asignatura;
     }
 
-    public function isTitular() {
+    public function getTitular() {
         return $this->titular;
     }
 

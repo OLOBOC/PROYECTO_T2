@@ -3,7 +3,8 @@
 class Trianglulo {
 
    
-    public function generartriangulo(int $altura): string {
+    public function generateTriangle(int $altura): string {
+        echo "<pre>";
         // cadena vacia por si es negativo
         if ($altura < 0) {
             return "Error es negativo";
@@ -21,7 +22,7 @@ class Trianglulo {
             // espacios y asteriscos
             $triangulo .= "<p>" .$spacios .$spacios .$asteriscos. "</p>\n";
         }
-
+        echo"</pre>";
         return $triangulo; 
     }
 }

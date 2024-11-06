@@ -18,13 +18,13 @@ $asignaturas = Asignatura::crearAsignaturasDeMuestra();
 // lista alumn 
 echo "<h2>Alumnos</h2>";
 foreach ($alumnos as $alumno) {
-    echo "<li>"."Nombre: " . $alumno->getNombre() . ", Email: " . $alumno->getEmail()."</li>" ;
+    echo "<li>"."Nombre: " . $alumno->getNombre() . " ".$alumno->getApellidos(). ",  Email: " . $alumno->getEmail()."</li>" ;
 }
 
 // lista prof
 echo "<h2>Profesores</h2>";
 foreach ($profesores as $profesor) {
-   echo "<li>" . "Nombre: " . $profesor->getNombre() . ", Email: " . $profesor->getEmail() . "</li>";
+   echo "<li>" . "Nombre: " . $profesor->getNombre() . " ".$profesor->getApellidos(). ",  Email: " . $profesor->getEmail() . "</li>";
 }
 
 // lista asig
@@ -40,7 +40,7 @@ $filtradoalumn = array_filter($alumnos, function($alumn) {
 });
 echo "<h2>Alumnos <= 23</h2>";
 foreach ($filtradoalumn as $alumn) {
-    echo "<li>" . "Nombre: " . $alumn->getNombre() . ", Email: " . $alumn->getEmail() . "</li>";
+    echo "<li>" . "Nombre: " . $alumn->getNombre() . " ".$alumn->getApellidos(). ",  Email: " . $alumn->getEmail() . "</li>";
 }
 
 //matriculacion de alumnos en asignaturas
@@ -76,7 +76,7 @@ $filtroalumn2 = array_filter($alumnos, function($alumno) {
 //listado de el array filter de fitroalumn2 
 echo "<h2>Alumnos con al menos dos asignaturas</h2>";
 foreach ($filtroalumn2 as $alumno) {
-    echo "<li>" . "Nombre: " . $alumno->getNombre() . ", Email: " . $alumno->getEmail() . "</li>";
+    echo "<li>" . "Nombre: " . $alumno->getNombre() . " ".$alumno->getApellidos(). ",  Email: " . $alumno->getEmail() . "</li>";
 }
 
 //asignaturas con algún alumno matriculado
