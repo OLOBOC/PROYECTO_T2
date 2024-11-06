@@ -62,7 +62,7 @@ $libros = [
 <ol>
     <?php foreach ($libros as $libro) : ?>
         <?php if ($libro["categoria"] === "Desarrollo web") : ?>
-            <li><?php echo $libro["titulo"]; ?> - <?php echo $libro["autor"]; ?></li>
+            <li><?php echo $libro["titulo"]; ?> </li>
         <?php endif; ?>
     <?php endforeach; ?>
 </ol>

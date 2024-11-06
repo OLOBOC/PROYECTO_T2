@@ -4,14 +4,14 @@ abstract class Miembro {
     private $nombre;
     private $apellidos;
     private $email;
-    private $edad;
+    
 
     public function __construct($id, $nombre, $apellidos, $email, $edad) {
         $this->id = $id;
         $this->nombre = $nombre;
         $this->apellidos = $apellidos;
         $this->email = $email;
-        $this->edad = $edad;}
+        }
 
     public function getId() {
         return $this->id;
@@ -29,9 +29,7 @@ abstract class Miembro {
         return $this->email;
     }
 
-    public function getEdad() {
-        return $this->edad;
-    }
+    
 
     
 }
