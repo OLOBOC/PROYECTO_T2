@@ -60,6 +60,15 @@ $alumnos[7]->matricularEnAsignatura($asignaturas[2]);
 $alumnos[8]->matricularEnAsignatura($asignaturas[1]);
 $alumnos[9]->matricularEnAsignatura($asignaturas[0]);
 
+// // alumn que tienen al menos dos asignaturas
+// echo "<h2>Alumnos con al menos dos asignaturas</h2>";
+// foreach ($alumnos as $alumno) {
+//     if (count($alumno->getAsignaturas()) >= 2) {
+//         echo "<li>" . "Nombre: " . $alumno->getNombre() . ", Email: " . $alumno->getEmail() . "</li>";
+//     }
+// }
+
+
 // alumnos con almenos dos asignaturas 
 $filtroalumn2 = array_filter($alumnos, function($alumno) {
     return count($alumno->getAsignaturas()) >= 2;
@@ -84,7 +93,6 @@ foreach ($alumnos as $alumno) {
 
 //asignaturas que tienen al menos un alumno
 foreach ($asignaturasMatriculadas as $asignaturaMatriculada) {
-    echo "Nombre: " . $asignaturaMatriculada->getNombre() . ", Créditos: " . $asignaturaMatriculada->getCreditos() . "<br>";
+    echo "<li>"."Nombre: " . $asignaturaMatriculada->getNombre() . ", Créditos: " . $asignaturaMatriculada->getCreditos() . "</li>";
 }
-?>
 ?>

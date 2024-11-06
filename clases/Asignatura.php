@@ -31,7 +31,7 @@ class Asignatura extends Miembro
     }
 
 
-    //metodo crear asing muestra(llmar en index)
+    //metodo crear asing muestra(llmar index)
     public static function crearAsignaturasDeMuestra()
     {
         return [
@@ -43,4 +43,3 @@ class Asignatura extends Miembro
     }
 
 }
-?>

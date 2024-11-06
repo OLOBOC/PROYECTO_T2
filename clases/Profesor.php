@@ -1,6 +1,6 @@
 <?php
-
 include_once('clases/Miembro.php');
+
 class Profesor extends Miembro {
     private $titular;
     private $asignatura; 
@@ -27,6 +27,6 @@ class Profesor extends Miembro {
             new Profesor(4, "Rasmus", "Lerdorf", "rasmus@php.com", 55, $asignaturas[3])
         ];
     }
-    
+
 }
 ?>
