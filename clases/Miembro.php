@@ -28,9 +28,7 @@ abstract class Miembro {
     public function getEmail() {
         return $this->email;
     }
-
     
-
     
 }
 ?>

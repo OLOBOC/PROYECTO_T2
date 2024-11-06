@@ -34,6 +34,16 @@ class Alumno extends Miembro
             $this->asignaturas[] = $asignatura;
         }
     }
+    //Comprobar que no se puede matricular a un alumno dos veces en la misma asignatura.
+    // public function matricularEnAsignatura($asignatura)
+    // {
+    //     if (!in_array($asignatura, $this->asignaturas)) {
+    //         $this->asignaturas[] = $asignatura;
+    //         echo "Te has matriculado en la asignatura: " . $asignatura->getNombre() . ".<br>";
+    //     } else {
+    //         echo "Ya estás matriculado en la asignatura: " . $asignatura->getNombre() . ".<br>";
+    //     }
+    // }
 
     //metodo estatico crearalumnmuestra(llmar en eel index)
     public static function crearAlumnosDeMuestra($asignaturas)

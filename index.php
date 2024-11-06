@@ -95,4 +95,17 @@ foreach ($alumnos as $alumno) {
 foreach ($asignaturasMatriculadas as $asignaturaMatriculada) {
     echo "<li>"."Nombre: " . $asignaturaMatriculada->getNombre() . ", Créditos: " . $asignaturaMatriculada->getCreditos() . "</li>";
 }
+
+
 ?>
+<!-- <?php
+        echo "--------------------------------------------------------------";
+
+        ;
+
+        // Matricular al primer alumno en la primera asignatura
+        $alumnos[0]->matricularEnAsignatura($asignaturas[0]);
+        // Intentar matricular al mismo alumno en la misma asignatura nuevamente
+        $alumnos[0]->matricularEnAsignatura($asignaturas[0]);
+        echo "--------------------------------------------------------------";
+        ?>  -->
