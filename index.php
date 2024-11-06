@@ -69,4 +69,22 @@ echo "<h2>Alumnos con al menos dos asignaturas</h2>";
 foreach ($filtroalumn2 as $alumno) {
     echo "<li>" . "Nombre: " . $alumno->getNombre() . ", Email: " . $alumno->getEmail() . "</li>";
 }
+
+//asignaturas con algún alumno matriculado
+echo "<h2>Asignaturas con algun Alumno Matriculados</h2>";
+$asignaturasMatriculadas = [];
+
+foreach ($alumnos as $alumno) {
+    foreach ($alumno->getAsignaturas() as $asignatura) {
+        if (!in_array($asignatura, $asignaturasMatriculadas)) {
+            $asignaturasMatriculadas[] = $asignatura;
+        }
+    }
+}
+
+//asignaturas que tienen al menos un alumno
+foreach ($asignaturasMatriculadas as $asignaturaMatriculada) {
+    echo "Nombre: " . $asignaturaMatriculada->getNombre() . ", Créditos: " . $asignaturaMatriculada->getCreditos() . "<br>";
+}
+?>
 ?>
